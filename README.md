@@ -1,5 +1,30 @@
 # shadowsocks-libev
 
+## GodSocks TODO List
+
+### 关于shadowsocks-libev相关改造任务
+
+- 将shadowsocks-libev在linux平台下面进行编译测试，同时验证客户端和服务端的功能是否可以使用。同时构建自己的Travis-ci.org编译测试。
+- 重新阅读socks5的协议文档，并且写一个简单的文档来介绍socks5的协议
+- 认真阅读shadowsocks5-libev的源代码，然后针对主要流程和核心功能写一个文档。分析里面的工作流程的主要的内容。
+- 研究并且实现在shadowsocks5-libev中加入HTTP转Socks5协议的功能，让客户端能够支持HTTP代理。
+- 研究并且实现在shadowsocks5-libev客户端加入与中心服务器通过http协议进行交互的功能。
+- 研究并且实现在shadowsocks5-libev服务端加入与中心服务器交互的功能。
+- 研究部署代理服务器管理中心、客户端管理集群服务器、数据库中心、中转服务器集群的实现和部署问题。(在保证安全的同时，提高不同类型用户的访问质量)
+- 准备在国内寻找一些VPS服务器提供商，需要他们提供高带宽的服务器作为我们的代理中转服务器集群，最好是BGP多线机房。争取能够在1月1日左右进行运营测试。
+- 针对shadowsocks-libev中的acl过滤文件进行更新，把最近的中国IP地址更新出来。同时有一个自动化的程序，能够从相关数据库中生成对应的ACL过滤文件。
+
+### 关于客户端方面相关的功能
+
+- 继续实现基于Web的客户端前端，并且尽快进入测试阶段。
+- 针对shadowsocks-android项目进行界面修改，主要是把里面的图标修改成我们的程序图标，同时将里面的一些默认配置修改成我们的服务器设置，能够使用起来。
+- 将GodSocks原来的内核进行改造，使其能够支持Shadowsocks的协议。Windows客户端的其它暂时不变，如果Web客户端的前端可以使用的话，那么就加入Shadowsocks的前端。
+
+### 网页改造以及前期运营所要处理的问题
+
+- 与营销这边讨论新产品的定位和形态，同时进行网页的相关的改造工作，准备推广链接等相关的任务。
+- 得到新的身份证和电话卡，同时在支付宝申请支持接口，同时进行相关的测试。
+
 ## Intro
 
 [Shadowsocks-libev](http://shadowsocks.org) is a lightweight secured SOCKS5 
