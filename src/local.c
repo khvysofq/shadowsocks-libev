@@ -1210,7 +1210,8 @@ int main(int argc, char **argv)
     if (mode != TCP_ONLY) {
         LOGI("udprelay enabled");
         init_udprelay(local_addr, local_port, listen_ctx.remote_addr[0],
-                      get_sockaddr_len(listen_ctx.remote_addr[0]), m, auth, listen_ctx.timeout, iface);
+                      get_sockaddr_len(listen_ctx.remote_addr[0]), m, auth, 
+                        listen_ctx.timeout, iface);
     }
 
     LOGI("listening at %s:%s", local_addr, local_port);
